@@ -1,133 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
-  </head>
-  <body>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="calc.js"></script>
+</head>
+<body>
+    <div id="calc-parent">
+        <div class="row">
+            <div class="column" id="calc-display-val">0</div>
         </div>
-      </div>
-    </nav>
+        <div class="row">
+            <div class="calc-btn calc-btn-s column" id="calc-clear">AC</div>
+            <div class="calc-btn calc-btn-s column" id="calc-simbol">+/-</div>
+            <div class="calc-btn calc-btn-s  column" id="calc-remainder">&#37;</div>
+            <div class="calc-btn calc-btn-operator column" id="calc-divide">&divide</div>
+        </div>
+        <div class="row">
+            <div class="calc-btn calc-btn-num column" id="calc-seven">7</div>
+            <div class="calc-btn calc-btn-num column" id="calc-eight">8</div>
+            <div class="calc-btn calc-btn-num column" id="calc-nine">9</div>
+            <div class="calc-btn calc-btn-operator column" id="calc-multiply">x</div>
+        </div>
+        <div class="row">
+            <div class="calc-btn calc-btn-num column" id="calc-four">4</div>
+            <div class="calc-btn calc-btn-num column" id="calc-five">5</div>
+            <div class="calc-btn calc-btn-num column" id="calc-six">6</div>
+            <div class="calc-btn calc-btn-operator column" id="calc-subtract">-</div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-4">
-          <div class="item">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident soluta neque eius pariatur temporibus officia nesciunt dignissimos beatae laboriosam, consectetur consequuntur tempora, saepe amet? Pariatur cumque eaque vitae tenetur ducimus.</p>
-          </div>
         </div>
-        <div class="col-12 col-md-4">
-          <div class="item">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident soluta neque eius pariatur temporibus officia nesciunt dignissimos beatae laboriosam, consectetur consequuntur tempora, saepe amet? Pariatur cumque eaque vitae tenetur ducimus.</p>
-          </div>
+        <div class="row">
+            <div class="calc-btn calc-btn-num column" id="calc-one">1</div>
+            <div class="calc-btn calc-btn-num column" id="calc-two">2</div>
+            <div class="calc-btn calc-btn-num column" id="calc-three">3</div>
+            <div class="calc-btn calc-btn-operator column" id="calc-plus">+</div>
         </div>
-        <div class="col-12 col-md-4">
-          <div class="item">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident soluta neque eius pariatur temporibus officia nesciunt dignissimos beatae laboriosam, consectetur consequuntur tempora, saepe amet? Pariatur cumque eaque vitae tenetur ducimus.</p>
-          </div>
+        <div class="row">
+            <div class="calc-btn calc-btn-num " id="calc-zero">0</div>
+            <div class="calc-btn calc-btn-num column" id="calc-decimal">.</div>
+            <div class="calc-btn calc-btn-operator column" id="calc-eqal">=</div>
         </div>
-      </div>
     </div>
-    
-
-    <div class="container">
-      <div class="row gx-5 gy-2 row-cols-1 row-cols-md-4">
-        <div class="col">
-          <div class="item h-100">
-            <img src="https://fakeimg.pl/300x200/cccccc" class="w-100" >
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis tempora tempore earum atque temporibus nostrum quisquam labore, dolor ea ratione harum officia facere quaerat rerum placeat illum non cum iure!</p>
-          </div>
-        </div>
-        <div class="col">
-          <div class="item h-100">
-            <img src="https://fakeimg.pl/300x200/cccccc" class="w-100" >
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis tempora tempore earum atque temporibus nostrum quisquam labore, dolor ea ratione harum officia facere quaerat rerum placeat illum non cum iure!</p>
-          </div>
-        </div>
-        <div class="col">
-          <div class="item h-100">
-            <img src="https://fakeimg.pl/300x200/cccccc" class="w-100" >
-            <p>Loremfficia facere quaerat rerum placeat illum non cum iure!</p>
-          </div>
-        </div>
-        <div class="col">
-          <div class="item h-100">
-            <img src="https://fakeimg.pl/300x200/cccccc" class="w-100" >
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditicia facere quaerat rerum placeat illum non cum iure!</p>
-          </div>
-        </div>
-        <div class="col">
-          <div class="item h-100">
-            <img src="https://fakeimg.pl/300x200/cccccc" class="w-100" >
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis bus nostrum quisquam labore, dolor ea ratione harum officia facere quaerat rerum placeat illum non cum iure!</p>
-          </div>
-        </div>
-        <div class="col">
-          <div class="item h-100">
-            <img src="https://fakeimg.pl/300x200/cccccc" class="w-100" >
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis tempora tempore earum atque temporibus nostrum quisquam labore, dolor ea ratione harum officia facere quaerat rerum placeat illum non cum iure!</p>
-          </div>
-        </div>
-        <div class="col">
-          <div class="item h-100">
-            <img src="https://fakeimg.pl/300x200/cccccc" class="w-100" >
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis tempora tempore earum atque temporibus nostrum quisquam labore, dolor ea ratione harum officia facere quaerat rerum placeat illum non cum iure!</p>
-          </div>
-        </div>
-        <div class="col">
-          <div class="item h-100" >
-            <img src="https://fakeimg.pl/300x200/cccccc" class="w-100" >
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis tempora tempore earum atque temporibus nostrum quisquam labore, dolor ea ratione harum officia facere quaerat rerum placeat illum non cum iure!</p>
-          </div>
-        </div>
-
-        
-      </div>
-    </div>
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-  </body>
+</body>
 </html>
